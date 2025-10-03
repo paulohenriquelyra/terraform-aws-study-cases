@@ -13,6 +13,7 @@ Este documento lista todos os projetos de referência utilizados neste repositó
 | alfonsof/terraform-aws-examples | 138 | Fundamentos | Iniciante | ⭐⭐⭐⭐⭐ |
 | aws-samples/best-practices | 52 | Guidelines | Intermediário | ⭐⭐⭐⭐⭐ |
 | YashPimple/Terraform-AWS-Architecture | 16 | Arquiteturas | Intermediário | ⭐⭐⭐ |
+| KUNAL-MAURYA1470/EKS-Terraform-GitHub-Actions | 2 | CI/CD | Avançado | ⭐⭐⭐⭐ |
 | DhruvinSoni30/Infrastructure_Provisioning | 4 | Production | Avançado | ⭐⭐⭐ |
 
 ---
@@ -313,7 +314,68 @@ Lista curada de recursos sobre Terraform e OpenTofu da HashiCorp. Referência es
 
 ---
 
-## 8. DhruvinSoni30/Terraform_Infrastructure_Provisioning
+## 8. KUNAL-MAURYA1470/EKS-Terraform-GitHub-Actions
+
+### Informações Gerais
+- **URL**: https://github.com/KUNAL-MAURYA1470/EKS-Terraform-GitHub-Actions
+- **Stars**: 2 | **Forks**: 7
+- **Linguagens**: HCL 100%
+- **Blog**: [Production-Ready EKS Provisioning](https://kunalmaurya.hashnode.dev/production-ready-eks-provisioning-with-terraform-and-github-actions)
+
+### Descrição
+Provisionamento de cluster EKS production-grade usando Terraform com automação completa via GitHub Actions. Demonstra workflow moderno de CI/CD.
+
+### Estrutura
+- **backend/**: Backend S3 + DynamoDB
+- **eks/**: Configuração principal
+- **module/**: Módulo com VPC, IAM e EKS
+- **.github/workflows/**: Workflow GitHub Actions
+
+### Abordagem
+- Cluster EKS com VPC dedicada (3 AZs)
+- Node groups (On-Demand + Spot)
+- OIDC provider para IAM
+- EKS add-ons gerenciados
+- Workflow dispatch manual (plan/apply/destroy)
+- Terraform caching
+- Validação automática
+
+### Por Que Estudar
+- ✅ EKS + GitHub Actions (lacuna nos outros projetos)
+- ✅ Arquitetura production-ready
+- ✅ Código limpo e bem estruturado
+- ✅ Workflow moderno de CI/CD
+- ✅ Relevante para mercado (EKS + CI/CD muito demandado)
+- ✅ Uso de Spot instances para otimização
+
+### Aplicação Prática
+- Provisionamento de EKS
+- Automação com GitHub Actions
+- Remote state management
+- Cost optimization com Spot
+- Workflow dispatch
+
+### Prioridade de Estudo
+⭐⭐⭐⭐ **MÉDIA-ALTA** - Após dominar EKS e fundamentos de CI/CD
+
+### Pontos de Atenção
+- Repositório recente (baixa popularidade)
+- Documentação básica
+- Módulo monolítico (VPC + IAM + EKS)
+- Falta de testes automatizados
+- Security group com 0.0.0.0/0
+
+### Melhorias Sugeridas
+- Separar módulos (VPC, IAM, EKS)
+- Adicionar tfsec e checkov
+- Implementar múltiplos ambientes
+- Adicionar Infracost
+- Melhorar security groups
+- Adicionar observabilidade
+
+---
+
+## 9. DhruvinSoni30/Terraform_Infrastructure_Provisioning
 
 ### Informações Gerais
 - **URL**: https://github.com/DhruvinSoni30/Terraform_Infrastructure_Provisioning
@@ -341,7 +403,7 @@ Infraestrutura production-ready altamente disponível na AWS usando Terraform Mo
 ### Por Que Estudar
 - ✅ Exemplo production-ready
 - ✅ Uso de módulos reutilizáveis
-- ✅ Integração CI/CD completa
+- ✅ Integração CI/CD com Jenkins
 - ✅ Estrutura multi-cliente
 - ✅ Workflow documentado
 - ✅ Combina IaC + Config Management
@@ -369,7 +431,8 @@ Infraestrutura production-ready altamente disponível na AWS usando Terraform Mo
 5. **YashPimple/Terraform-AWS-Architecture** - Arquiteturas
 6. **futurice/terraform-examples** - Casos de uso
 7. **cloudposse/terraform-aws-components** - Enterprise
-8. **DhruvinSoni30/Infrastructure_Provisioning** - Production + CI/CD
+8. **KUNAL-MAURYA1470/EKS-Terraform-GitHub-Actions** - EKS + GitHub Actions
+9. **DhruvinSoni30/Infrastructure_Provisioning** - Production + Jenkins
 
 ### Referência Contínua
 - **shuaibiyy/awesome-tf** - Consultar sempre que precisar descobrir novos recursos
@@ -389,10 +452,13 @@ Para demonstrar competência profissional em entrevistas:
 3. **aws-samples/aws-terraform-best-practices** ⭐⭐⭐⭐⭐
    - Demonstra conhecimento de padrões profissionais
 
-4. **cloudposse/terraform-aws-components** ⭐⭐⭐⭐
+4. **KUNAL-MAURYA1470/EKS-Terraform-GitHub-Actions** ⭐⭐⭐⭐
+   - Mostra domínio de CI/CD moderno com GitHub Actions
+
+5. **cloudposse/terraform-aws-components** ⭐⭐⭐⭐
    - Mostra conhecimento de arquiteturas enterprise
 
-5. **futurice/terraform-examples** ⭐⭐⭐⭐
+6. **futurice/terraform-examples** ⭐⭐⭐⭐
    - Demonstra versatilidade com casos de uso variados
 
 ---
